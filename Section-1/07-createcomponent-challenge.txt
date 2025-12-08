@@ -1,0 +1,32 @@
+import { createRoot } from "react-dom/client"
+
+const root = createRoot(document.getElementById("root"))
+
+/**
+ * Challenge (part 1):
+ * Create a custom "Page" component
+ * 
+ * It should return an ordered list with the reasons why you're
+ * excited to be learning React :)
+ * 
+ * Render the Page component.
+ */
+
+function Page() {
+    return (
+        
+        <ol>
+        <li>Single Page Application </li>
+        <li>Performance Optimization </li>
+        <li>Ecosystem and Community </li>
+        <li>Component based Architecture </li>
+        <li>Get a High paying and Skilled frontend Developer job </li>
+
+        </ol>
+        
+    )
+}
+
+root.render(
+    <Page />
+)

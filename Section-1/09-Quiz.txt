@@ -1,0 +1,25 @@
+1. What is a React component?
+React component is a part of Code or Whole Webpage that returs UI elements to render
+
+2. What's wrong with this code?
+```
+function myComponent() {
+    return (
+        <small>I'm tiny text!</small>
+    )
+}
+```
+myComponent shouldbe in MyComponent{Pascal Case}
+3. What's wrong with this code?
+```
+function Header() {
+    return (
+        <header>
+            <img src="./react-logo.png" width="40px" alt="React logo" />
+        </header>
+    )
+}
+
+root.render(Header())
+```
+render should be <Header />

@@ -1,0 +1,51 @@
+/**
+ * Challenge: Build out the main content section!
+ * 
+ * For now, skip 2 aspects of the design and we'll work on them later:
+ *   1. The colored bullets in the list
+ *   2. The larger gray React logo on the side
+ */
+
+Extras - Styling Bullet in a list - 
+li::marker {
+  color: red;
+}
+
+Adding a Image as a Background 
+
+export default function Main() {
+    return (
+        <main className="main">
+        <h1 className="head">Fun facts about React</h1>
+        <ul className="fact-list"> 
+        <li>React is a JavaScript library for building user interfaces</li>
+        <li>particularly single-page applications. It uses a virtual DOM for efficient updates</li>
+        <li>Allows to create  reusable components.</li>
+        <li>making it widely adopted in the industry.</li>
+        <li>It was developed by Facebook</li>
+        </ul>
+        </main>
+    )
+}
+
+
+//CSS
+
+
+.main {
+    background-color: black;
+    padding:20px 20px;
+    margin:0px 20px;
+    font-weight: 700;
+    
+} 
+
+
+.head {
+    color: white;
+    }
+    
+.fact-list {
+    color: white;
+    
+}

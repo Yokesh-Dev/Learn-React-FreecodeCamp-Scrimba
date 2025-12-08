@@ -1,0 +1,53 @@
+### Challenge: Set Up a Simple React Project for Beginners
+
+This challenge is designed for someone who is just starting with React. The goal is to walk through setting up a basic React app step by step.
+
+---
+
+#### Prerequisites
+Make sure you have **Node.js** installed on your machine. You can download it from the [official Node.js website](https://nodejs.org/).
+
+
+### Steps to Create a Simple React App
+
+1. **Install Create React App**
+   Open your terminal (Command Prompt, PowerShell, or Terminal) and run the following command to install `create-react-app`:
+   ```bash
+   npx create-react-app my-first-app
+   ```
+
+2. **Navigate to Your Project Folder**
+   After the installation is complete, go to your project folder:
+   ```bash
+   cd my-first-app
+   ```
+
+3. **Start the Application**
+   Launch the development server by running:
+   ```bash
+   npm start
+   ```
+   Your default web browser will open with your new React app running at `http://localhost:3000`.
+
+---
+
+#### Basic Tasks to Complete
+
+1. **Identify App Structure**
+   - Look at the files in the `src` folder. Note the `App.js` file which contains your main component.
+
+2. **Modify the Default Message**
+   - Open `src/App.js` in a code editor (like Visual Studio Code).
+   - Change the line with `<header>` to display a custom message. For example:
+     ```javascript
+     <h1>Welcome to My First React App!</h1>
+     ```
+
+3. **Add a Simple Button**
+   - Below the message, add a button that says "Click Me":
+     ```javascript
+     <button>Click Me</button>
+     ```
+
+4. **Save and View Changes**
+   - Save your changes and go back to your browser. The text should change immediately due to React's hot reloading feature.

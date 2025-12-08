@@ -1,0 +1,59 @@
+Importing and Exporting Components
+
+
+import { createRoot } from "react-dom/client"
+import Header from "./Header"
+import MainContent from "./MainContent.jsx";
+const root = createRoot(document.getElementById("root"))
+
+/**d
+ * Challenge: move the MainContent and Footer components to their own
+ * separate files.
+ */
+
+
+function Footer() {
+    return (
+        <footer>
+            <small>© 2024 Ziroll development. All rights reserved.</small>
+        </footer>
+    )
+}
+
+function Page() {
+    return (
+        <>
+            <Header />
+            <MainContent />
+            <Footer />
+        </>
+    )
+}
+
+root.render(
+    <Page />
+)
+
+
+
+
+
+
+
+
+
+
+
+New Page -MainContent.jsx
+
+export default function MainContent() {
+    return (
+        <main>
+            <h1>Reason I am excited to learn React</h1>
+            <ol>
+                <li>React is a popular library, so I will be able to fit in with all the coolest devs out there! 😎</li>
+                <li>I am more likely to get a job as a front end developer if I know React</li>
+            </ol>
+        </main>
+    )
+}

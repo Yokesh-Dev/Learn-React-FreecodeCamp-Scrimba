@@ -1,0 +1,54 @@
+/**
+ * Challenge: complete the Navbar to match the Figma design
+ * 
+ * Hints:
+ * - for semantic HTML purposes, the Navbar should render
+ *   a <header> with a <nav> nested inside. The image and "ReactFacts"
+ *   text elements can both be rendered as children inside the <nav>
+ * - reference the Figma design for the most accurate info about
+ *   colors, sizes, font information, etc.
+ */
+
+export default function Navbar() {
+    return (
+        <header className="header">
+        <nav className="nav">
+        <img src="react-logo.png"  alt="react logo"  className="image"/>
+        <h4 className="text">ReactFacts </h4>
+        </nav>
+        </header>
+    )
+}
+
+
+Css//
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, 'Times New Roman', Times, serif;
+}
+
+.header {
+    background-color: black;
+    display: flex;
+    padding: 20px;
+    
+    
+}
+
+.nav{
+    display: flex;
+    gap: 20px;
+}
+
+.image{
+    width: 55px;
+}
+
+.text{
+    color: cyan;
+}
