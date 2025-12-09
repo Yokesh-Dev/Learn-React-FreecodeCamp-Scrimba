@@ -1,0 +1,7 @@
+const FName = "Joe";
+const LName = "Root";
+return  (
+<h1>My name is {FName} {LName} </h1>
+)
+
+Value and logic can be added above and inject the variable inside JSX.

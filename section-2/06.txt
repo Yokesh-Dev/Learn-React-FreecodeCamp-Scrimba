@@ -1,0 +1,29 @@
+Quiz
+
+1. What do props help us accomplish?
+props allow us to create resusable components making it generic flexiblity to create attributed as per your requirement, by seperating logic and Data.
+which makes react a Data Driven.
+
+
+2. How do you pass a prop into a component?
+We can pass a prop in a similar way  in html tag with an attribute.
+sample <Component propName="value">
+
+
+3. Can I pass a custom prop (e.g. `blahblahblah={true}`) to a native
+   DOM element? (e.g. <div blahblahblah={true}>) Why or why not?
+   yes, React allows us pass prop as per our requirement and needs that is logical and meaningful.
+// No because , You cant pass custom props into Native HTML elements like div {as real dom tags have the attributes that specefied in HTML}.
+
+4. How do I receive props in a component?
+function Navbar() {
+    return (
+        <header>
+            ...
+        </header>
+    )
+}
+To receive props you need to pass the prop as parameter inside the Navbar function
+
+5. What data type is `props` when the component receives it?
+Object

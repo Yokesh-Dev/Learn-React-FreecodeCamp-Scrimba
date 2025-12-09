@@ -1,0 +1,14 @@
+Quiz
+
+1. What does the `.map()` array method do?
+Allows us to tranform all elements iniside an array without mutating real array.
+
+
+2. What do we usually use `.map()` for in React?
+To render all the elements in array making the component reuseable.
+
+
+3. Critical thinking: why is using `.map()` better than just
+   creating the components manually by typing them out?
+
+using allows us to render 1000 of elements in same way easy to reuse, prevent from hardcoding best practice is to spearate logic and Data.

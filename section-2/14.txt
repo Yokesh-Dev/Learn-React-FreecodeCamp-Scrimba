@@ -1,0 +1,43 @@
+Passing an Object as Props in React
+
+Passing an Object as Props in React
+In React, props (short for "properties") allow you to pass data from one component to another, typically from a parent component to a child component. You can pass simple data types (like strings or numbers) as well as complex data types, including objects.
+
+Why Pass Objects as Props?
+Passing objects as props is useful when you want to encapsulate related data and pass it together rather than as individual props. This keeps your component API cleaner and makes the components easier to manage.
+
+// Parent Component
+import React from 'react';
+import Profile from './Profile';
+
+const App = () => {
+    const user = {
+        name: "John Doe",
+        age: 30,
+        email: "john.doe@example.com"
+    };
+
+    return (
+        <div>
+            <Profile user={user} />
+        </div>
+    );
+};
+
+// Child Component
+const Profile = (props) => {
+    return (
+        <div>
+            <h1>{props.user.name}</h1>
+            <p>Age: {props.user.age}</p>
+            <p>Email: {props.user.email}</p>
+        </div>
+    );
+};
+
+export default App;
+
+Benefits of Passing Objects as Props
+Cleaner Code: Bundling related data reduces the number of props you need to manage.
+Better Readability: It makes it clear that the props belong together.
+Flexibility: Allows easy modification and expansion of the data passed without changing the component's API.

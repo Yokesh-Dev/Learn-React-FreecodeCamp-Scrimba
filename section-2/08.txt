@@ -1,0 +1,22 @@
+Challenge Non String props
+
+/**
+ * Challenge: Think critically - how would you pass in a prop that 
+ * isn't a string datatype.
+ * 
+ * E.g. Say you want each Joke component to receive an "upvotes" 
+ * and "downvotes" prop that is a number, as well as a prop with 
+ * an array of comments, and a boolean of whether the joke is a 
+ * pun (`isPun`).
+ */
+ 
+ 
+                 upvotes={10}
+                isPun={true}
+				
+
+Relative path Alternates 
+Instead of copy and pasting full links like - img="./images/mr-whiskerson.png"
+replace with this method
+import felix from "./images/felix.png"
+img={whiskerson}//

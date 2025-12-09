@@ -1,0 +1,64 @@
+/**
+ * Challenge:
+ * - import the array of data from data.js
+ * - map over the array to create an <Entry /> component
+ *   for every item in the data array.
+ * - display the array of Entry components in place of the current
+ *   hard-coded <Entry /> instance.
+ */
+ --------------------------
+ import data from "./data"
+ 
+ export default function App() {
+    const rendering = data.map( (arr) => {
+        return  (
+            <Entry 
+        img={arr.img}
+        title={arr.title}
+        country={arr.country} 
+        googleMapsLink={arr.googleMapsLink}
+        dates={arr.dates}
+        text={arr.text}
+         />
+         )
+    })
+    
+    return (
+        <>
+            <Header />
+            <main className="container">
+
+                {rendering}
+            </main>
+        </>
+    )
+}
+-----------------Entry Component-------------------
+export default function Entry(props) {
+    return (
+        <article className="journal-entry">
+            <div className="main-image-container">
+                <img 
+                    className="main-image"
+                    src={props.img.src} 
+                    alt={props.img.alt}
+                />
+            </div>
+            <div className="info-container">
+                <img 
+                    className="marker"
+                    src="../images/marker.png" 
+                    alt="map marker icon"
+                />
+                <span className="country">{props.country}</span>
+                <a href={props.googleMapsLink} target="_blank">View on Google Maps</a>
+                <h2 className="entry-title">{props.title}</h2>
+                <p className="trip-dates">{props.dates}</p>
+                <p className="entry-text">{props.text}</p>
+            </div>
+            
+        </article>
+    )
+}
+
+key = {arr.id}
