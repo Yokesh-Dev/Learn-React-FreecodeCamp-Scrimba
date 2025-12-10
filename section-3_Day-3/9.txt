@@ -1,0 +1,11 @@
+
+     * Challenge:
+     * Add the new ingredient to the array oconsole.log("Form submitted!")f ingredients. Also, add a 
+     * console.log(ingredients) after adding the ingredient, because 
+     * **warning**: you aren't going to see the page update!
+     * 
+     * Hint: this is a one-liner solution, so don't overthink it 😅
+
+Solution -         
+ingredients.push(newIngredient)
+console.log(ingredients)

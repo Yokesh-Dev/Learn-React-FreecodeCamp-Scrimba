@@ -1,0 +1,29 @@
+Static Web Pages
+
+01 Read-only, no user-driven changes to data
+
+02 Example
+
+· Blogs
+· News sites
+· Recipes
+· etc.
+
+
+Dynamic Web Apps
+01 Read-write: user has ability to change data
+
+02 Highly interactive
+
+03 Displays your data
+
+04 Examples:
+
+Bank website
+Airbnb
+ecommerce sites
+
+
+
+
+

@@ -1,0 +1,18 @@
+Updating State with Normal Function
+
+export deafault function Counter(){
+const [count,setCount]=useSate(0);
+function add() {
+setCount(count+1)
+}
+function sub() {
+setCount(count-1)
+}
+return(
+<div>
+<h1>Counter</h1>
+<h2>{count}</h2>
+<button onClick={ass}>+ </button>
+<button onClick={sub}>- </button>
+</div>
+)}

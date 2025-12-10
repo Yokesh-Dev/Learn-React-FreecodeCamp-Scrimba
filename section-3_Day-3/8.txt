@@ -1,0 +1,27 @@
+Understanding the FormData Object
+FormData: This is a built-in JavaScript object that allows you to easily construct a set of key/value pairs
+ representing form fields and their values.
+Usage: It is particularly useful for handling form submissions, especially when you need to collect data 
+from a form that includes file uploads.
+
+       const formData = new FormData(event.currentTarget)
+This instance then allows you to easily access and manipulate the data submitted through the form.
+
+Understanding the FormData Object
+FormData: This is a built-in JavaScript object that allows you to easily construct a set of key/value pairs
+ representing form fields  and their values.
+
+Usage: It is particularly useful for handling form submissions, especially when you need to collect data 
+from a form that includes file uploads.
+----------------------------------------------------
+What is currentTarget?
+
+How Does It Work?
+Imagine you have a form with a button. When you click the button, both the button and the form respond to 
+the click.currentTarget will refer to the form because that’s where you attached the event listener.
+
+
+Key Difference
+target: Refers to the actual element that was clicked (like the button).
+currentTarget: Always refers to the element the event handler is listening to (like the form).
+

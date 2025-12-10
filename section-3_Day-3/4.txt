@@ -1,0 +1,20 @@
+ /**
+   * Challenge: add our new function to the button
+   */
+ 
+function handleClick() {
+    console.log("I was clicked!")
+  }
+  
+Function at Top of Component and add to onclick 
+
+return (
+    <main className="container">
+      <img
+        src="https://picsum.photos/640/360"
+        alt="Placeholder image from Picsum"
+      />
+      <button onClick={handleClick}>Click me</button>
+    </main>
+  )
+}
