@@ -1,0 +1,38 @@
+    /**
+     * Challenge:
+     * Raise state up a level and pass it down to both the
+     * Header and Body components through props.
+     */
+    
+    const [userName, setUserName] = React.useState("Joe")
+
+    return (
+        <header>
+            <img src={avatar} />
+            <p>{userName}</p>
+        </header>
+    )
+}
+--------------Add State to Nearest Hirearchy------------------------
+const [userName, setUserName] = React.useState("Joe")
+
+    return (
+        <main>
+            <Header  name={userName}/>
+            <Body   name={userName}/>
+---------------------------------------------
+			export default function Header({name}) {
+
+
+    return (
+        <header>
+            <img src={avatar} />
+            <p>{name}</p>
+        </header>
+    )
+}
+----------------------
+export default function Body({name}) {
+        <section>
+            <h1>Welcome back, {name}!</h1>
+        </section>

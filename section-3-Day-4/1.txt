@@ -1,0 +1,35 @@
+Forms
+
+<input type="text" name="" />
+Name attribute is how we acccess the data that is input inside the input box to get data and render it.
+
+--------------------------------------- 	
+ <form>
+        <label htmlFor="email">Email:</label>
+        <input id="email" type="email" name="email" placeholder="joe@schmoe.com" name="pass" />
+        <br />
+        
+        <label htmlFor="password">password:</label> 
+        <input placeholder="*******" type="password" />
+        
+      </form>
+-------------------------------------
+  function handleSubmit(event) {
+    event.preventDefault()
+    const formEl = event.currentTarget
+    const formData = new FormData(formEl)
+    const email = formData.get("email")
+    console.log(email)
+    formEl.reset()
+------------------------------------
+  /**
+   * Challenge: get the password from the form too and log
+   * it to the console to be sure it came in correctly.
+   */
+  
+  function signUp(formData) {
+    const email = formData.get("email")
+    const password=formData.get("password")
+    console.log(email)
+    console.log(password)
+  }

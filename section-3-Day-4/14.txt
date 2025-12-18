@@ -1,0 +1,25 @@
+/**
+ * Challenge: See if you can figure out how to use the
+ * react-markdown package to render `props.recipe` as React
+ * elements rather than the plain markdown text.
+ * 
+ * Use the link in the slide to navigate directly to the
+ * package's instructions on how to use it.
+ * 
+ * Use the `suggested-recipe-container` class on the <section>
+ * below to get some free styling 🙂
+ */
+ 
+https://www.npmjs.com/package/react-markdown
+
+
+react-markdown is a React component that safely renders Markdown text as React elements.
+We use it to display user-written or dynamic Markdown content in React apps.
+It avoids security risks like XSS by not using dangerouslySetInnerHTML.
+It also lets you customize rendering with plugins and your own React components.
+
+
+dangerouslySetInnerHTML is a React property used to insert raw HTML directly into the DOM.
+It’s used when you need to render HTML strings that React would normally escape.
+The risk is that it can expose your app to XSS (security) attacks if the HTML is untrusted.
+Because of this danger, React requires an explicit name to warn developers before using it.

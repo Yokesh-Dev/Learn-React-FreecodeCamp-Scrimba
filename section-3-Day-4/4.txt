@@ -1,0 +1,18 @@
+Quiz
+1. What is "conditional rendering"?
+conditional rendering is a concept to render a element or part of Ui in Webpage based on some conditions.
+
+
+2. When would you use &&?
+We would use && if both conditions are true , display both or display none
+
+
+3. When would you use a ternary?
+ternary operators are simple method to create conditional statements based on true or false.
+Syntax = UserPaid ? "Premium" :"pay". If Userpaid is true display Premium content else none.
+
+
+4. What if you need to decide between > 2 options on
+   what to display?
+
+if else statement or create a function switch statement 

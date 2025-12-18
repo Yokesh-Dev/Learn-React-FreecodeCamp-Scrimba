@@ -1,0 +1,35 @@
+1️⃣ What is a Server?
+
+A server is a machine (or software) that:
+
+Runs continuously
+
+Handles requests from clients (browser, mobile apps)
+
+Contains backend logic, APIs, databases, authentication
+
+Example:
+Node.js (Express), Java Spring, Django running on AWS EC2, DigitalOcean, etc.
+
+2️⃣ What is Serverless?
+
+Serverless means:
+
+You don’t manage servers
+
+Backend code runs as functions on demand
+
+Cloud provider handles scaling, infra, uptime
+
+Examples:
+AWS Lambda, Vercel Functions, Netlify Functions, Firebase Functions
+
+👉 Servers still exist, but you don’t manage them
+
+----------------
+| Server         | Serverless            |
+| -------------- | --------------------- |
+| Always running | Runs only when needed |
+| Manual scaling | Auto-scaling          |
+| Pay for uptime | Pay per request       |
+| More control   | Less infra control    |

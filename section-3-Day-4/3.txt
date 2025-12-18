@@ -1,0 +1,57 @@
+export default function App() {
+    const [unreadMessages, setUnreadMessages] = React.useState(["a", "b"])
+    
+    /**
+     * Challenge:
+     * Only display the <h1> below if there are unread messages
+     */
+    
+    return (
+        <div>
+            <h1>You have _ unread messages!</h1>
+        </div>
+    )
+}
+
+-------------
+            {unreadMessages.length>0 && <h1>You have {unreadMessages.length} unread messages!</h1>}
+-------------------
+    /**
+     * Challenge:
+     * If there are 0 unread messages, display a paragraph that says "You
+     * have no unread messages". (So, the logic will be the opposite of
+     * what we have for the h1)
+     */
+--------------------
+            {
+                unreadMessages.length>0 
+                    let text
+    
+    if (messages.length === 0) {
+        text = "You're all caught up!"
+    } else if (messages.length === 1) {
+        text = "You have 1 unread message"
+    } else {
+        text = `You have ${message.length} unread messages`
+    }
+    
+    return (
+        <div>
+            <h1>{text}</h1>
+        </div>
+    )
+}?<h1>You have {unreadMessages.length} unread messages!</h1> 
+                :<h1>You have no unread messages </h1>
+              
+            }
+			
+-----------------------------------------
+    /**
+     * Challenge:
+     * - If there are no unread messages, display "You're all caught up!"
+     * - If there's exactly 1 unread message, it should read "You have 
+     *   1 unread message" (singular)
+     * - If there are > 1 unread messages, display "You have <n> unread
+     *   messages" (plural)
+     */
+-----------------------------------------------

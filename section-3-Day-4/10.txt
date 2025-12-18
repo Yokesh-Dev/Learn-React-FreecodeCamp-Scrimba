@@ -1,0 +1,50 @@
+* Challenge part 1:
+     * 1. Initialize state with the default value of the
+     *    array pulled in from pads.js
+     * 2. Map over that state array and display each one
+     *    as a <button> (CSS is already written for you)
+     *    (Don't worry about using the "on" or "color" 
+     *    properties yet)
+---------	-------------------------------------------------
+const [array,setArray] = React.useState(pads)
+
+const btEl = array.map( arr =>(
+    <button key={arr.id}>Hi</button>
+) )
+
+    return (
+        <main>
+            <div className="pad-container">
+            {btEl}
+            </div>
+        </main>
+    )
+----------------------------------------------------------
+   /**
+     * Challenge part 2:
+     * 1. Create a separate component called "Pad" and
+     *    replace the `button` above with our <Pad /> component
+     * 2. Pass the Pad component a prop called `color` with the
+     *    value of the same name from the `padsData` objects
+     * 3. In the Pad component, apply an inline style to the <button>
+     *    to set the backgroundColor of the button.
+     * 
+     * (We'll deal with the "on" property soon)
+     */
+	
+-----------------------------------------------------------    /**
+     * Challenge part 3:
+     * Our buttons got turned off by default! Update the code
+     * so if the button is "on", it has the className of "on".
+     */
+-------------------------------------------------------------
+        /**
+         * Challenge:
+         * Call setPads to update the state of the one pad that was
+         * clicked. Map over the previous pads array, and if the current
+         * item you're iterating over has the same id as the `id` passed
+         * to this function, then return a new object with the `on` value
+         * set to the opposite of what it was before.
+         * Otherwise (if the ids don't match), just return the previous
+         * item as it was, unchanged.
+         */
