@@ -1,0 +1,120 @@
+Fetching Data in React - Understanding
+
+Big picture first (so the lines make sense)
+
+This code:
+
+creates state
+
+fetches data from an API (Star Wars API)
+
+stores that data in state
+
+displays it on the screen
+
+Now let’s go line by line, slowly.
+	
+1️⃣ const [starWarsData, setStarWarsData] = useState(null)
+
+What this does
+
+This line creates state in a React component.
+
+Break it down
+
+useState(null)
+→ Creates a piece of state with an initial value of null
+
+starWarsData
+→ The current value of the state
+
+setStarWarsData
+→ A function to update that state
+
+Why null?
+
+Because at first, we don’t have data yet
+
+The data will arrive later from the API
+
+📌 Think of it like:
+
+“I have a box called starWarsData, but it’s empty for now.”
+
+2️⃣ fetch("https://swapi.dev/api/people/1")
+
+What this does
+
+Sends a request to the Star Wars API
+
+Asks for data about person #1 (Luke Skywalker)
+
+Important idea
+
+fetch is asynchronous → it takes time
+
+It immediately returns a Promise
+
+3️⃣ .then(res => res.json())
+
+What this does
+
+Waits for the API to respond
+
+Converts the response into JSON
+
+Why is this needed?
+
+The raw response is not usable yet
+
+.json() turns it into a JavaScript object
+
+📌 Flow so far:
+
+Request → Response → Convert to JSON
+
+4️⃣ .then(data => setStarWarsData(data))
+
+What this does
+
+Takes the parsed JSON data
+
+Stores it in React state
+
+Key idea
+
+Calling setStarWarsData(data):
+
+Updates state
+
+Causes the component to re-render
+
+Now starWarsData contains real data 🎉
+
+5️⃣ return ( ... )
+
+This is JSX — what your component displays.
+
+6️⃣ <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
+
+Break it down
+
+<pre>
+→ Preserves spacing and formatting
+
+JSON.stringify(...)
+→ Converts the object into readable text
+
+The arguments
+
+starWarsData → the data to convert
+
+null → no custom formatting function
+
+2 → indent spacing (pretty-print)
+
+Why do this?
+
+Objects can’t be displayed directly in JSX
+
+This makes the API data human-readable

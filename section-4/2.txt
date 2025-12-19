@@ -1,0 +1,54 @@
+    /**
+     * Challenge:
+     * Instead of console logging the data, save it in state
+     * and display it to the page. (Just replace the hard-coded
+     * object inside the `<pre>` element with the data)
+     */ 
+	 Link- https://swapi.info/api/people
+----------------------------------------------------------------------
+const [starWarsData, setStarWarsData] = React.useState(null)
+
+    fetch("https://swapi.dev/api/people/1")
+        .then(res => res.json())
+        .then(data => setStarWarsData(data))
+    
+    return (
+        <div>
+            <pre>{JSON.stringify({starWarsData}, null, 2)}</pre>
+        </div>
+----------------------------------------------------------------------
+React + API Fetch Pattern
+
+Initialize state with null
+
+Fetch data
+
+Convert response to JSON
+
+Save data to state
+
+Render state
+
+Key Rules
+
+State updates trigger re-renders
+
+Fetch is asynchronous
+
+Objects must be stringified to display
+
+Mental model
+
+“Fetch → Parse → Store → Display”
+------------------------------------------------
+🧠 Summary (short & clear)
+
+useState stores API data
+
+fetch gets data from a URL
+
+.then() handles async steps
+
+setStarWarsData saves data and re-renders
+
+JSON.stringify displays the object nicely

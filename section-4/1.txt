@@ -1,0 +1,28 @@
+         * Challenge: update the topText value in the meme state
+         * object every time the topText input box is changed
+         * 
+         * Note: don't worry about bottomText at this point.
+         */
+		 
+-----------------------------------------------------------
+{
+    const [meme, setMeme] = useState({
+        topText: "One does not simply",
+        bottomText: "Walk into Mordor",
+        imageUrl: "http://i.imgflip.com/1bij.jpg"
+    })
+	
+	    function handleChange(event) {
+        const {value} = event.currentTarget
+        setMeme(prevmeme =>({
+            ...prevmeme,
+            topText:value
+        }))
+		
+		                <label>Top Text
+                    <input
+                        type="text"
+                        placeholder="One does not simply"
+                        name="topText"
+                        onChange={handleChange}
+                    />

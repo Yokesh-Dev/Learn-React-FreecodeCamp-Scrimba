@@ -1,0 +1,23 @@
+Quiz - 
+1. In what way are React components meant to be "pure functions"
+The functions run based on the provided inputs, Like react components are pure functions function runs and return
+same  Ui renders.
+
+
+2. What is a "side effect" in React? What are some examples?
+Side effects allows us the perform side effect actions like fetching data,set timer ,local storeage
+ that is ouside UI that react does not control.
+It prevents us from infinite renders whenever the state is changed we can control it by dependecy array.
+
+
+3. What is NOT a "side effect" in React? Examples?
+rendering UI , storing data in state , all the things handled by react
+
+4. When does React run your useEffect function? When does it NOT run
+   the effect function?
+   Runs at the first render {refresh and launch app } and re-renders whenever there is a change in state.
+   It does not run the efffect , if there in no change in the dependecy array
+
+
+5. How would you explain what the "dependecies array" is?
+It tells react when to re-run the function based on the change in the dependecy array.

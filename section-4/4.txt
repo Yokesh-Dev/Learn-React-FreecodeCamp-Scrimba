@@ -1,0 +1,226 @@
+UseEffect Learnings -Concept
+
+1️⃣ The core idea (before syntax)
+
+You already know this:
+
+Rendering = React showing UI based on state
+
+Now here’s the key question 👇
+When should code run that is NOT directly about rendering UI?
+
+Examples:
+
+Fetching data from an API
+
+Listening to window resize
+
+Saving to localStorage
+
+Starting a timer
+
+👉 These are called side effects
+---------------------------------------------
+etching data is the classic side effect.
+
+2️⃣ Why useEffect exists (the problem it solves)
+
+Let’s think without useEffect first.
+
+Imagine this component:
+
+function User() {
+  const [user, setUser] = useState(null);
+
+  fetch("/api/user")
+    .then(res => res.json())
+    .then(data => setUser(data));
+
+  return <div>{user?.name}</div>;
+}
+
+
+⚠️ Problem:
+Every time state updates → component re-renders → fetch runs again → infinite loop
+
+So React needed a way to say:
+
+“Run this code after render, and only when I tell you to.”
+
+👉 That’s useEffect
+
+3️⃣ Mental model (VERY important)
+🧠 Think of useEffect as:
+
+“After React finishes rendering, run this effect.”
+
+Not during render.
+Not before render.
+After.
+
+Simple analogy 🌱
+
+Render = setting up the room
+
+useEffect = turning on the AC, calling someone, opening a window
+
+You don’t rearrange furniture inside the AC logic.
+
+4️⃣ Basic syntax (no magic yet)
+useEffect(() => {
+  // side effect code
+}, []);
+
+
+Two parts:
+
+Effect function → what to run
+
+Dependency array → when to run
+
+Before I explain the array…
+
+Question 👇
+
+What do you think the empty array [] might mean?
+------------------------------------------------------------
+5️⃣ Dependency array (the control panel)
+
+Your idea is correct. Here’s the precise mental model:
+
+The dependency array tells React when to re-run the effect AFTER render
+
+Three common patterns 🔁
+1️⃣ Run once (on mount)
+useEffect(() => {
+  console.log("Runs once");
+}, []);
+
+
+✔️ Empty array
+✔️ Runs after first render only
+
+🧠 Think: “Component just appeared on screen”
+
+2️⃣ Run when something changes
+useEffect(() => {
+  console.log("User changed");
+}, [userId]);
+
+
+✔️ Runs on first render
+✔️ Runs again only if userId changes
+
+🧠 Think: “React, watch this variable”
+
+3️⃣ Run after every render (rare)
+useEffect(() => {
+  console.log("Every render");
+});
+
+
+⚠️ Usually avoid — easy to cause loops
+
+6️⃣ Real-world example: Fetching data (correct way)
+
+Let’s connect this to what you said earlier 👇
+
+function User({ userId }) {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    fetch(`/api/users/${userId}`)
+      .then(res => res.json())
+      .then(data => setUser(data));
+  }, [userId]);
+
+  return <div>{user?.name}</div>;
+}
+
+Why this works:
+
+UI renders
+
+useEffect runs after render
+
+Fetch happens
+
+State updates → re-render
+
+Effect runs again only if userId changes
+
+7️⃣ Cleanup (real world necessity)
+
+Some effects leave “mess” behind 😬
+Examples:
+
+Event listeners
+
+Timers
+
+WebSocket connections
+
+Example: window resize listener
+useEffect(() => {
+  function handleResize() {
+    console.log(window.innerWidth);
+  }
+
+  window.addEventListener("resize", handleResize);
+
+  return () => {
+    window.removeEventListener("resize", handleResize);
+  };
+}, []);
+
+
+🧠 Analogy:
+
+Effect = turning something on
+
+Cleanup = turning it off
+
+React runs cleanup before the effect runs again
+and when the component unmounts
+
+8️⃣ Common use cases (you’ll see these everywhere)
+
+✔️ Fetching data
+✔️ Subscribing/unsubscribing (events, sockets)
+✔️ Syncing state with:
+
+localStorage
+
+URL params
+
+document title
+
+Example:
+
+useEffect(() => {
+  document.title = `Count: ${count}`;
+}, [count]);
+
+9️⃣ Common mistakes (important ⚠️)
+
+❌ Missing dependencies
+❌ Updating state that’s also a dependency → infinite loop
+❌ Doing heavy logic inside render instead of useEffect
+
+🔁 Quick check (teach it back)
+
+Answer one question:
+
+In your own words:
+When does useEffect run, and what does the dependency array control?
+
+After that, I’ll:
+
+Show a localStorage example
+
+Explain why ESLint complains
+
+Give you a one-line memory trick 🧠
+--------------------------------------------------------------------------]
+useEffect runs after the component renders.
+It runs on the first render, and again only when values in the dependency array change.
