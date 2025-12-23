@@ -1,0 +1,12 @@
+ ES7 + React Snippets Extension
+ Import Extension
+ React Dev Tools Chrome
+ React Component Tree
+ 
+
+* **ES7 + React/Redux/React-Native Snippets Extension** – Provides shortcuts to quickly generate React code (components, imports, hooks) in VS Code.
+* **Import Extension** – Automatically helps organize and add imports in your JavaScript/React files.
+* **React Developer Tools (Chrome)** – Lets you inspect and debug React components in the browser.
+* **React Component Tree** – Visualizes the hierarchy of React components for easier debugging and understanding of app structure.
+Reactree – A VS Code extension that shows a tree view of React components in your project.
+It helps navigate and understand component structure quickly while coding.
